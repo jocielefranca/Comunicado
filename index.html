@@ -25,9 +25,16 @@
         .container {
             max-width: 850px;
             margin: 0 auto;
-            background: white;
+            background: linear-gradient(135deg, #6ECC01 0%, #357C0B 100%);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 2px;
+        }
+        
+        .content-wrapper {
+            background: white;
+            border-radius: 18px;
             overflow: hidden;
         }
         
@@ -323,6 +330,12 @@
                 max-width: none !important;
                 width: 100% !important;
                 background: white !important;
+                padding: 0 !important;
+            }
+            
+            .content-wrapper {
+                background: white !important;
+                border-radius: 0 !important;
             }
             
             .header {
@@ -499,7 +512,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="content-wrapper">
+            <div class="header">
             <div class="header-content">
                 <div class="icon-container">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
