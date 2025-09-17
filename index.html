@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado - Instalação de Ar-Condicionado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background: linear-gradient(135deg, #6ECC01 0%, #357C0B 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .icon-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #C5F167 0%, #6ECC01 100%);
+            color: #357C0B;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            font-weight: 500;
+            box-shadow: 0 10px 20px rgba(110, 204, 1, 0.2);
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            color: #357C0B;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #6ECC01;
+            position: relative;
+            page-break-after: avoid;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #357C0B;
+            border-radius: 2px;
+        }
+        
+        .guideline {
+            background: #F0F5CD;
+            border-left: 5px solid #6ECC01;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+            page-break-inside: avoid;
+        }
+        
+        .guideline:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(110, 204, 1, 0.2);
+        }
+        
+        .guideline-title {
+            color: #357C0B;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            page-break-after: avoid;
+        }
+        
+        .guideline-title::before {
+            content: '▶';
+            color: #6ECC01;
+            margin-right: 10px;
+            font-size: 0.8em;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .guideline ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        
+        .guideline li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .guideline li::before {
+            content: '•';
+            color: #6ECC01;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+            top: -2px;
+        }
+        
+        .guideline li:last-child {
+            margin-bottom: 0;
+        }
+
+        .special-highlight {
+            background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
+            color: white;
+            border-left: 5px solid #6ECC01;
+            box-shadow: 0 10px 25px rgba(53, 124, 11, 0.3);
+        }
+
+        .special-highlight .guideline-title {
+            color: #C5F167;
+            font-size: 1.15em;
+        }
+
+        .special-highlight .guideline-title::before {
+            color: #6ECC01;
+        }
+
+        .special-highlight li::before {
+            color: #6ECC01;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 20px rgba(53, 124, 11, 0.3);
+            page-break-inside: avoid;
+        }
+        
+        .warning-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-title::before {
+            content: '⚠️';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            background: #F0F5CD;
+            padding: 30px;
+            text-align: center;
+            color: #357C0B;
+            font-weight: 500;
+            page-break-inside: avoid;
+        }
+        
+        .footer-message {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .signature {
+            font-style: italic;
+            color: #00512A;
+        }
+        
+        .contact-info {
+            font-size: 0.9em;
+            color: #357C0B;
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            margin-bottom: 5px;
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #6ECC01 0%, #6ECC01 100%);
+            background-size: 100% 0.3em;
+            background-position: 0 88%;
+            background-repeat: no-repeat;
+            font-weight: 500;
+            color: #357C0B;
+        }
+        
+        .portal-link {
+            color: #357C0B;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px solid #6ECC01;
+            transition: all 0.3s ease;
+        }
+        
+        .portal-link:hover {
+            background: #6ECC01;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .steps-list {
+            background: rgba(197, 241, 103, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .steps-list li {
+            font-family: 'Inter', monospace;
+            font-size: 0.95em;
+            color: #00512A;
+        }
+        
+        /* Estilos específicos para impressão e PDF */
+        @media print {
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+            
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                max-width: none !important;
+                width: 100% !important;
+                background: white !important;
+            }
+            
+            .header {
+                page-break-inside: avoid;
+                padding: 25px 20px !important;
+                break-inside: avoid;
+            }
+            
+            .header h1 {
+                font-size: 1.8em !important;
+            }
+            
+            .content {
+                padding: 20px !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 25px !important;
+            }
+            
+            .section-title {
+                font-size: 1.2em !important;
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            
+            .guideline {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 15px !important;
+                padding: 15px !important;
+            }
+            
+            .guideline-title {
+                page-break-after: avoid;
+                break-after: avoid;
+                font-size: 1em !important;
+            }
+            
+            .warning-box {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin: 20px 0 !important;
+                padding: 20px !important;
+            }
+            
+            .footer {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                padding: 20px !important;
+            }
+            
+            .intro {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 20px !important;
+                padding: 20px !important;
+            }
+            
+            /* Ajustes de cores para impressão */
+            .special-highlight {
+                background: #F0F5CD !important;
+                color: #2d2d2d !important;
+                border-left: 5px solid #357C0B !important;
+            }
+            
+            .special-highlight .guideline-title {
+                color: #357C0B !important;
+            }
+            
+            .warning-box {
+                background: #F0F5CD !important;
+                color: #2d2d2d !important;
+                border: 2px solid #357C0B !important;
+            }
+            
+            .warning-title {
+                color: #357C0B !important;
+            }
+            
+            /* Evita quebras órfãs */
+            h1, h2, h3, .section-title, .guideline-title, .warning-title {
+                page-break-after: avoid;
+                break-after: avoid;
+                orphans: 3;
+                widows: 3;
+            }
+            
+            p, li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            ul, ol {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .guideline ul {
+                page-break-inside: auto;
+                break-inside: auto;
+            }
+            
+            .contact-item {
+                display: block !important;
+                margin: 5px 0 !important;
+            }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .guideline {
+                padding: 15px;
+            }
+            
+            .warning-box {
+                padding: 20px;
+            }
+            
+            .footer {
+                padding: 25px 20px;
+            }
+            
+            .contact-item {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+            
+            .section-title {
+                font-size: 1.2em;
+            }
+            
+            .guideline-title {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão flutuante para gerar PDF -->
+    <div class="pdf-button-container">
+        <button class="pdf-button" onclick="generatePDF()" title="Gerar PDF do comunicado">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14,2 14,8 20,8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10,9 9,9 8,9"/>
+            </svg>
+            Gerar PDF
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="icon-container">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        <path d="m13 13 4.5 4.5"/>
+                        <path d="m18.5 12.5-4.5 4.5"/>
+                    </svg>
+                </div>
+                <h1>Comunicado aos Condôminos</h1>
+                <p class="subtitle">Orientações Técnicas para Instalação de Ar-Condicionado</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <strong>Prezados condôminos,</strong><br><br>
+                Para orientá-los na instalação dos equipamentos de ar-condicionado em suas unidades, preparamos este guia técnico com <span class="highlight">recomendações importantes</span> que contribuirão para a preservação da infraestrutura do edifício e garantirão a durabilidade dos sistemas instalados.
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">✅ Definição de Local para Condensadora</h2>
+                
+                <div class="guideline special-highlight">
+                    <div class="guideline-title">Localização Obrigatória da Condensadora</div>
+                    <ul>
+                        <li>A solução técnica adotada para este empreendimento prevê que a <strong>condensadora seja instalada exclusivamente na varanda ou na área externa definida pelo condomínio</strong></li>
+                        <li>É fundamental que as empresas contratadas pelos condôminos <strong>respeitem esta orientação</strong></li>
+                        <li>Esta definição garante <strong>segurança, desempenho adequado e conformidade com o projeto</strong></li>
+                        <li>Orientamos que não sejam aceitas propostas de instalação em locais diferentes do especificado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🔧 Orientações Técnicas Recomendadas</h2>
+                
+                <div class="guideline">
+                    <div class="guideline-title">1. Localização e Execução das Passagens</div>
+                    <ul>
+                        <li>Recomendamos seguir as <strong>medidas previstas em projeto arquitetônico</strong></li>
+                        <li>Sugerimos executar o <strong>teste de percussão</strong> antes de qualquer perfuração</li>
+                        <li>Caso o ponto não seja localizado conforme especificado, <strong>recomendamos interromper</strong> o serviço e registrar solicitação via <a href="#" class="portal-link">Portal do Cliente</a></li>
+                    </ul>
+                </div>
+
+                <div class="guideline">
+                    <div class="guideline-title">2. Identificação de Interferências</div>
+                    <ul>
+                        <li><strong>Orientamos parar</strong> a perfuração ao identificar qualquer infraestrutura existente</li>
+                        <li>Registre solicitação de suporte técnico via <a href="#" class="portal-link">Portal do Cliente</a> para orientação especializada</li>
+                        <li>Recomendamos aguardar orientação antes de prosseguir com os trabalhos</li>
+                    </ul>
+                </div>
+
+                <div class="guideline">
+                    <div class="guideline-title">3. Caixa de Passagem - Atenção Especial</div>
+                    <ul>
+                        <li>A <strong>15 cm à direita</strong> da caixa localiza-se a tubulação de dreno coletiva</li>
+                        <li>Esta tubulação atende <strong>toda a coluna de apartamentos</strong></li>
+                        <li>Recomendamos cuidado especial nesta região para preservar o sistema de drenagem</li>
+                    </ul>
+                </div>
+
+                <div class="guideline">
+                    <div class="guideline-title">4. Especificações Estruturais</div>
+                    <ul>
+                        <li>Espessura das paredes estruturais: <strong>12 cm</strong></li>
+                        <li>Para instalações no forro: <strong>sugerimos acompanhamento técnico especializado</strong></li>
+                        <li>Recomendamos utilização de equipamentos adequados para cada tipo de estrutura</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">👥 Orientação para Empresas Especializadas</h2>
+                
+                <div class="guideline special-highlight">
+                    <div class="guideline-title">Suporte Técnico Disponível</div>
+                    <ul>
+                        <li>A administradora do condomínio recebeu treinamento e pode disponibilizar <strong>as orientações necessárias</strong> para empresas especializadas</li>
+                        <li>Apresentação das especificações técnicas e melhores práticas</li>
+                        <li>Esclarecimento de dúvidas técnicas e orientações específicas do projeto</li>
+                        <li>Para acessar este suporte técnico, <strong>recomendamos o contato</strong> com a administradora do condomínio</li>
+                    </ul>
+                </div>
+
+                <div class="guideline">
+                    <div class="guideline-title">Responsabilidades da Empresa Contratada</div>
+                    <ul>
+                        <li><strong>Consultar obrigatoriamente</strong> os projetos disponíveis no Portal do Cliente antes do início dos trabalhos</li>
+                        <li>Seguir rigorosamente as especificações técnicas e orientações fornecidas</li>
+                        <li>Interromper os trabalhos caso identifique qualquer interferência ou dúvida técnica</li>
+                        <li>Solicitar suporte técnico via Portal do Cliente sempre que necessário</li>
+                        <li>Respeitar a definição de local para instalação da condensadora conforme projeto</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🌐 Portal do Cliente - Consulta e Suporte</h2>
+                
+                <div class="guideline">
+                    <div class="guideline-title">Consulta aos Projetos</div>
+                    <ul>
+                        <li><strong>Todos os projetos estão disponíveis</strong> no <a href="#" class="portal-link">Portal do Cliente</a></li>
+                        <li>É fundamental <strong>consultar os projetos antes</strong> de qualquer instalação ou alteração</li>
+                        <li>Os projetos contêm as especificações técnicas exatas para sua unidade</li>
+                    </ul>
+                </div>
+
+                <div class="guideline">
+                    <div class="guideline-title">Solicitação de Suporte Técnico</div>
+                    <ul>
+                        <li>Registre solicitações via <a href="#" class="portal-link">Portal do Cliente</a> seguindo o caminho:</li>
+                    </ul>
+                    <div class="steps-list">
+                        <ul>
+                            <li><strong>Assistência Técnica</strong> → <strong>Nova Assistência</strong> → <strong>Após registro</strong> → <strong>Ver Assistência</strong> → <strong>Agendar Visita</strong></li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li>Recomendamos <strong>incluir foto da situação</strong> identificada para facilitar a condução do atendimento</li>
+                        <li>Nossa equipe técnica utilizará estas informações para sequenciar o suporte adequado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="warning-title">Importante</div>
+                <p>Estas orientações técnicas têm como objetivo <strong>preservar a qualidade da edificação</strong> e evitar possíveis transtornos futuros. Recomendamos que sejam compartilhadas com as empresas especializadas que executarão os serviços, contribuindo assim para o sucesso da instalação e a satisfação de todos os moradores.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-message">
+                Esperamos que estas orientações sejam úteis para o planejamento da instalação em sua unidade. Estamos à disposição para <strong>esclarecer dúvidas técnicas</strong> e apoiar no que for necessário.
+            </div>
+            <div class="signature">
+                Atenciosamente,<br>
+                <strong>VICTA ENGENHARIA</strong>
+                
+                <div class="contact-info">
+                    <div class="contact-item">📞 <strong>Telefone/WhatsApp:</strong> (85) 3512-3512</div>
+                    <div class="contact-item">✉️ <strong>E-mail:</strong> relacionamento@victa.eng.br</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generatePDF() {
+            // Criar um elemento temporário com estilos otimizados para PDF
+            const printContent = document.querySelector('.container').cloneNode(true);
+            
+            // Criar uma nova janela para impressão
+            const printWindow = window.open('', '_blank');
+            
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="pt-BR">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Comunicado - Instalação de Ar-Condicionado</title>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+                        
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }
+                        
+                        @page {
+                            size: A4;
+                            margin: 1.5cm;
+                        }
+                        
+                        body {
+                            font-family: 'Inter', Arial, sans-serif;
+                            line-height: 1.6;
+                            color: #2d2d2d;
+                            background: white;
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
+                            color-adjust: exact;
+                        }
+                        
+                        .container {
+                            max-width: none;
+                            width: 100%;
+                            background: white;
+                            border-radius: 0;
+                            box-shadow: none;
+                            overflow: visible;
+                        }
+                        
+                        .header {
+                            background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
+                            color: white;
+                            padding: 25px 20px;
+                            text-align: center;
+                            position: relative;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                            border-radius: 10px;
+                            margin-bottom: 20px;
+                        }
+                        
+                        .header h1 {
+                            font-size: 1.8em;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                        }
+                        
+                        .header .subtitle {
+                            font-size: 1.1em;
+                            opacity: 0.9;
+                            font-weight: 300;
+                        }
+                        
+                        .icon-container {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba(255, 255, 255, 0.2);
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            margin-bottom: 20px;
+                        }
+                        
+                        .content {
+                            padding: 20px;
+                        }
+                        
+                        .intro {
+                            background: linear-gradient(135deg, #C5F167 0%, #6ECC01 100%);
+                            color: #357C0B;
+                            padding: 20px;
+                            border-radius: 15px;
+                            margin-bottom: 20px;
+                            font-weight: 500;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                        }
+                        
+                        .section {
+                            margin-bottom: 25px;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                        }
+                        
+                        .section-title {
+                            color: #357C0B;
+                            font-size: 1.2em;
+                            font-weight: 600;
+                            margin-bottom: 15px;
+                            padding-bottom: 8px;
+                            border-bottom: 3px solid #6ECC01;
+                            position: relative;
+                            page-break-after: avoid;
+                            break-after: avoid;
+                        }
+                        
+                        .section-title::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -3px;
+                            left: 0;
+                            width: 60px;
+                            height: 3px;
+                            background: #357C0B;
+                            border-radius: 2px;
+                        }
+                        
+                        .guideline {
+                            background: #F0F5CD;
+                            border-left: 5px solid #6ECC01;
+                            padding: 15px;
+                            margin-bottom: 15px;
+                            border-radius: 0 10px 10px 0;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                        }
+                        
+                        .guideline-title {
+                            color: #357C0B;
+                            font-weight: 600;
+                            font-size: 1em;
+                            margin-bottom: 12px;
+                            display: flex;
+                            align-items: flex-start;
+                            page-break-after: avoid;
+                            break-after: avoid;
+                        }
+                        
+                        .guideline-title::before {
+                            content: '▶';
+                            color: #6ECC01;
+                            margin-right: 10px;
+                            font-size: 0.8em;
+                            margin-top: 2px;
+                        }
+                        
+                        .guideline ul {
+                            list-style: none;
+                            padding-left: 0;
+                            margin: 0;
+                        }
+                        
+                        .guideline li {
+                            margin-bottom: 10px;
+                            padding-left: 25px;
+                            position: relative;
+                            line-height: 1.4;
+                        }
+                        
+                        .guideline li::before {
+                            content: '•';
+                            color: #6ECC01;
+                            position: absolute;
+                            left: 0;
+                            font-weight: bold;
+                            font-size: 1.2em;
+                            top: -2px;
+                        }
+                        
+                        .special-highlight {
+                            background: #F0F5CD;
+                            color: #2d2d2d;
+                            border-left: 5px solid #357C0B;
+                            border: 2px solid #357C0B;
+                            border-radius: 10px;
+                        }
+                        
+                        .special-highlight .guideline-title {
+                            color: #357C0B;
+                            font-size: 1.1em;
+                        }
+                        
+                        .warning-box {
+                            background: #F0F5CD;
+                            color: #2d2d2d;
+                            padding: 20px;
+                            border-radius: 15px;
+                            margin: 20px 0;
+                            border: 2px solid #357C0B;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                        }
+                        
+                        .warning-title {
+                            font-size: 1.2em;
+                            font-weight: 600;
+                            margin-bottom: 15px;
+                            display: flex;
+                            align-items: center;
+                            color: #357C0B;
+                        }
+                        
+                        .warning-title::before {
+                            content: '⚠️';
+                            margin-right: 10px;
+                            font-size: 1.2em;
+                        }
+                        
+                        .footer {
+                            background: #F0F5CD;
+                            padding: 20px;
+                            text-align: center;
+                            color: #357C0B;
+                            font-weight: 500;
+                            page-break-inside: avoid;
+                            break-inside: avoid;
+                            border-radius: 10px;
+                            margin-top: 20px;
+                        }
+                        
+                        .footer-message {
+                            font-size: 1em;
+                            margin-bottom: 15px;
+                            line-height: 1.6;
+                        }
+                        
+                        .signature {
+                            font-style: italic;
+                            color: #00512A;
+                        }
+                        
+                        .contact-info {
+                            font-size: 0.9em;
+                            color: #357C0B;
+                            margin-top: 15px;
+                        }
+                        
+                        .contact-item {
+                            display: block;
+                            margin: 5px 0;
+                        }
+                        
+                        .highlight {
+                            background: linear-gradient(120deg, #6ECC01 0%, #6ECC01 100%);
+                            background-size: 100% 0.3em;
+                            background-position: 0 88%;
+                            background-repeat: no-repeat;
+                            font-weight: 500;
+                            color: #357C0B;
+                        }
+                        
+                        .portal-link {
+                            color: #357C0B;
+                            font-weight: 600;
+                            text-decoration: underline;
+                        }
+                        
+                        .steps-list {
+                            background: rgba(197, 241, 103, 0.3);
+                            padding: 12px;
+                            border-radius: 8px;
+                            margin-top: 8px;
+                        }
+                        
+                        .steps-list li {
+                            font-family: 'Inter', monospace;
+                            font-size: 0.9em;
+                            color: #00512A;
+                        }
+                        
+                        h1, h2, h3, .section-title, .guideline-title, .warning-title {
+                            page-break-after: avoid;
+                            break-after: avoid;
+                            orphans: 3;
+                            widows: 3;
+                        }
+                        
+                        p, li {
+                            orphans: 2;
+                            widows: 2;
+                        }
+                    </style>
+                </head>
+                <body>
+                    ${printContent.outerHTML}
+                </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            
+            // Aguardar o carregamento das fontes e então imprimir
+            setTimeout(() => {
+                printWindow.print();
+                
+                // Fechar a janela após a impressão (opcional)
+                printWindow.addEventListener('afterprint', () => {
+                    printWindow.close();
+                });
+            }, 1000);
+        }
+        
+        // Adicionar atalho de teclado para gerar PDF (Ctrl+P customizado)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                generatePDF();
+            }
+        });
+    </script>
+</body>
+</html>
