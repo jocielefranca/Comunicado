@@ -17,7 +17,7 @@
             font-family: 'Inter', Arial, sans-serif;
             line-height: 1.6;
             color: #2d2d2d;
-            background: linear-gradient(135deg, #6ECC01 0%, #357C0B 100%);
+            background: #f8f9fa;
             min-height: 100vh;
             padding: 20px;
         }
@@ -27,7 +27,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
         
@@ -84,13 +84,14 @@
         }
         
         .intro {
-            background: linear-gradient(135deg, #C5F167 0%, #6ECC01 100%);
-            color: #357C0B;
+            background: #f8f9fa;
+            color: #2d2d2d;
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 30px;
             font-weight: 500;
-            box-shadow: 0 10px 20px rgba(110, 204, 1, 0.2);
+            border-left: 5px solid #357C0B;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .section {
@@ -104,7 +105,7 @@
             font-weight: 600;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #6ECC01;
+            border-bottom: 3px solid #357C0B;
             position: relative;
             page-break-after: avoid;
         }
@@ -116,23 +117,25 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #357C0B;
+            background: #00512A;
             border-radius: 2px;
         }
         
         .guideline {
-            background: #F0F5CD;
-            border-left: 5px solid #6ECC01;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-left: 5px solid #357C0B;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 0 10px 10px 0;
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             page-break-inside: avoid;
         }
         
         .guideline:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(110, 204, 1, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(2px);
+            transition: all 0.3s ease;
         }
         
         .guideline-title {
@@ -147,7 +150,7 @@
         
         .guideline-title::before {
             content: '▶';
-            color: #6ECC01;
+            color: #357C0B;
             margin-right: 10px;
             font-size: 0.8em;
             margin-top: 2px;
@@ -169,7 +172,7 @@
         
         .guideline li::before {
             content: '•';
-            color: #6ECC01;
+            color: #357C0B;
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -184,21 +187,22 @@
         .special-highlight {
             background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
             color: white;
-            border-left: 5px solid #6ECC01;
-            box-shadow: 0 10px 25px rgba(53, 124, 11, 0.3);
+            border-left: 5px solid #ffffff;
+            border: none;
+            box-shadow: 0 10px 25px rgba(53, 124, 11, 0.2);
         }
 
         .special-highlight .guideline-title {
-            color: #C5F167;
+            color: white;
             font-size: 1.15em;
         }
 
         .special-highlight .guideline-title::before {
-            color: #6ECC01;
+            color: #ffffff;
         }
 
         .special-highlight li::before {
-            color: #6ECC01;
+            color: #ffffff;
         }
         
         .warning-box {
@@ -207,7 +211,7 @@
             padding: 25px;
             border-radius: 15px;
             margin: 30px 0;
-            box-shadow: 0 10px 20px rgba(53, 124, 11, 0.3);
+            box-shadow: 0 10px 20px rgba(53, 124, 11, 0.2);
             page-break-inside: avoid;
         }
         
@@ -217,6 +221,7 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            color: white;
         }
         
         .warning-title::before {
@@ -226,7 +231,7 @@
         }
         
         .footer {
-            background: #F0F5CD;
+            background: #f8f9fa;
             padding: 30px;
             text-align: center;
             color: #357C0B;
@@ -258,40 +263,41 @@
         }
         
         .highlight {
-            background: linear-gradient(120deg, #6ECC01 0%, #6ECC01 100%);
-            background-size: 100% 0.3em;
-            background-position: 0 88%;
-            background-repeat: no-repeat;
+            background: #357C0B;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
             font-weight: 500;
-            color: #357C0B;
         }
         
         .portal-link {
             color: #357C0B;
             font-weight: 600;
             text-decoration: none;
-            border-bottom: 2px solid #6ECC01;
+            border-bottom: 2px solid #357C0B;
             transition: all 0.3s ease;
         }
         
         .portal-link:hover {
-            background: #6ECC01;
+            background: #357C0B;
             color: white;
             padding: 2px 5px;
             border-radius: 3px;
         }
         
         .steps-list {
-            background: rgba(197, 241, 103, 0.3);
+            background: #f8f9fa;
             padding: 15px;
             border-radius: 10px;
             margin-top: 10px;
+            border: 1px solid #e9ecef;
         }
         
         .steps-list li {
             font-family: 'Inter', monospace;
             font-size: 0.95em;
             color: #00512A;
+            font-weight: 500;
         }
         
         /* Estilos específicos para impressão e PDF */
@@ -350,6 +356,8 @@
                 break-inside: avoid;
                 margin-bottom: 15px !important;
                 padding: 15px !important;
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
             }
             
             .guideline-title {
@@ -378,19 +386,26 @@
                 padding: 20px !important;
             }
             
-            /* Ajustes de cores para impressão */
             .special-highlight {
-                background: #F0F5CD !important;
+                background: #f8f9fa !important;
                 color: #2d2d2d !important;
-                border-left: 5px solid #357C0B !important;
+                border: 2px solid #357C0B !important;
             }
             
             .special-highlight .guideline-title {
                 color: #357C0B !important;
             }
             
+            .special-highlight .guideline-title::before {
+                color: #357C0B !important;
+            }
+            
+            .special-highlight li::before {
+                color: #357C0B !important;
+            }
+            
             .warning-box {
-                background: #F0F5CD !important;
+                background: #f8f9fa !important;
                 color: #2d2d2d !important;
                 border: 2px solid #357C0B !important;
             }
@@ -399,7 +414,6 @@
                 color: #357C0B !important;
             }
             
-            /* Evita quebras órfãs */
             h1, h2, h3, .section-title, .guideline-title, .warning-title {
                 page-break-after: avoid;
                 break-after: avoid;
@@ -484,20 +498,6 @@
     </style>
 </head>
 <body>
-    <!-- Botão flutuante para gerar PDF -->
-    <div class="pdf-button-container">
-        <button class="pdf-button" onclick="generatePDF()" title="Gerar PDF do comunicado">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14,2 14,8 20,8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10,9 9,9 8,9"/>
-            </svg>
-            Gerar PDF
-        </button>
-    </div>
-
     <div class="container">
         <div class="header">
             <div class="header-content">
@@ -648,326 +648,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function generatePDF() {
-            // Criar um elemento temporário com estilos otimizados para PDF
-            const printContent = document.querySelector('.container').cloneNode(true);
-            
-            // Criar uma nova janela para impressão
-            const printWindow = window.open('', '_blank');
-            
-            printWindow.document.write(`
-                <!DOCTYPE html>
-                <html lang="pt-BR">
-                <head>
-                    <meta charset="UTF-8">
-                    <title>Comunicado - Instalação de Ar-Condicionado</title>
-                    <style>
-                        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-                        
-                        * {
-                            margin: 0;
-                            padding: 0;
-                            box-sizing: border-box;
-                        }
-                        
-                        @page {
-                            size: A4;
-                            margin: 1.5cm;
-                        }
-                        
-                        body {
-                            font-family: 'Inter', Arial, sans-serif;
-                            line-height: 1.6;
-                            color: #2d2d2d;
-                            background: white;
-                            -webkit-print-color-adjust: exact;
-                            print-color-adjust: exact;
-                            color-adjust: exact;
-                        }
-                        
-                        .container {
-                            max-width: none;
-                            width: 100%;
-                            background: white;
-                            border-radius: 0;
-                            box-shadow: none;
-                            overflow: visible;
-                        }
-                        
-                        .header {
-                            background: linear-gradient(135deg, #357C0B 0%, #00512A 100%);
-                            color: white;
-                            padding: 25px 20px;
-                            text-align: center;
-                            position: relative;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                            border-radius: 10px;
-                            margin-bottom: 20px;
-                        }
-                        
-                        .header h1 {
-                            font-size: 1.8em;
-                            font-weight: 700;
-                            margin-bottom: 10px;
-                            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-                        }
-                        
-                        .header .subtitle {
-                            font-size: 1.1em;
-                            opacity: 0.9;
-                            font-weight: 300;
-                        }
-                        
-                        .icon-container {
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                            background: rgba(255, 255, 255, 0.2);
-                            width: 80px;
-                            height: 80px;
-                            border-radius: 50%;
-                            margin-bottom: 20px;
-                        }
-                        
-                        .content {
-                            padding: 20px;
-                        }
-                        
-                        .intro {
-                            background: linear-gradient(135deg, #C5F167 0%, #6ECC01 100%);
-                            color: #357C0B;
-                            padding: 20px;
-                            border-radius: 15px;
-                            margin-bottom: 20px;
-                            font-weight: 500;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                        }
-                        
-                        .section {
-                            margin-bottom: 25px;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                        }
-                        
-                        .section-title {
-                            color: #357C0B;
-                            font-size: 1.2em;
-                            font-weight: 600;
-                            margin-bottom: 15px;
-                            padding-bottom: 8px;
-                            border-bottom: 3px solid #6ECC01;
-                            position: relative;
-                            page-break-after: avoid;
-                            break-after: avoid;
-                        }
-                        
-                        .section-title::after {
-                            content: '';
-                            position: absolute;
-                            bottom: -3px;
-                            left: 0;
-                            width: 60px;
-                            height: 3px;
-                            background: #357C0B;
-                            border-radius: 2px;
-                        }
-                        
-                        .guideline {
-                            background: #F0F5CD;
-                            border-left: 5px solid #6ECC01;
-                            padding: 15px;
-                            margin-bottom: 15px;
-                            border-radius: 0 10px 10px 0;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                        }
-                        
-                        .guideline-title {
-                            color: #357C0B;
-                            font-weight: 600;
-                            font-size: 1em;
-                            margin-bottom: 12px;
-                            display: flex;
-                            align-items: flex-start;
-                            page-break-after: avoid;
-                            break-after: avoid;
-                        }
-                        
-                        .guideline-title::before {
-                            content: '▶';
-                            color: #6ECC01;
-                            margin-right: 10px;
-                            font-size: 0.8em;
-                            margin-top: 2px;
-                        }
-                        
-                        .guideline ul {
-                            list-style: none;
-                            padding-left: 0;
-                            margin: 0;
-                        }
-                        
-                        .guideline li {
-                            margin-bottom: 10px;
-                            padding-left: 25px;
-                            position: relative;
-                            line-height: 1.4;
-                        }
-                        
-                        .guideline li::before {
-                            content: '•';
-                            color: #6ECC01;
-                            position: absolute;
-                            left: 0;
-                            font-weight: bold;
-                            font-size: 1.2em;
-                            top: -2px;
-                        }
-                        
-                        .special-highlight {
-                            background: #F0F5CD;
-                            color: #2d2d2d;
-                            border-left: 5px solid #357C0B;
-                            border: 2px solid #357C0B;
-                            border-radius: 10px;
-                        }
-                        
-                        .special-highlight .guideline-title {
-                            color: #357C0B;
-                            font-size: 1.1em;
-                        }
-                        
-                        .warning-box {
-                            background: #F0F5CD;
-                            color: #2d2d2d;
-                            padding: 20px;
-                            border-radius: 15px;
-                            margin: 20px 0;
-                            border: 2px solid #357C0B;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                        }
-                        
-                        .warning-title {
-                            font-size: 1.2em;
-                            font-weight: 600;
-                            margin-bottom: 15px;
-                            display: flex;
-                            align-items: center;
-                            color: #357C0B;
-                        }
-                        
-                        .warning-title::before {
-                            content: '⚠️';
-                            margin-right: 10px;
-                            font-size: 1.2em;
-                        }
-                        
-                        .footer {
-                            background: #F0F5CD;
-                            padding: 20px;
-                            text-align: center;
-                            color: #357C0B;
-                            font-weight: 500;
-                            page-break-inside: avoid;
-                            break-inside: avoid;
-                            border-radius: 10px;
-                            margin-top: 20px;
-                        }
-                        
-                        .footer-message {
-                            font-size: 1em;
-                            margin-bottom: 15px;
-                            line-height: 1.6;
-                        }
-                        
-                        .signature {
-                            font-style: italic;
-                            color: #00512A;
-                        }
-                        
-                        .contact-info {
-                            font-size: 0.9em;
-                            color: #357C0B;
-                            margin-top: 15px;
-                        }
-                        
-                        .contact-item {
-                            display: block;
-                            margin: 5px 0;
-                        }
-                        
-                        .highlight {
-                            background: linear-gradient(120deg, #6ECC01 0%, #6ECC01 100%);
-                            background-size: 100% 0.3em;
-                            background-position: 0 88%;
-                            background-repeat: no-repeat;
-                            font-weight: 500;
-                            color: #357C0B;
-                        }
-                        
-                        .portal-link {
-                            color: #357C0B;
-                            font-weight: 600;
-                            text-decoration: underline;
-                        }
-                        
-                        .steps-list {
-                            background: rgba(197, 241, 103, 0.3);
-                            padding: 12px;
-                            border-radius: 8px;
-                            margin-top: 8px;
-                        }
-                        
-                        .steps-list li {
-                            font-family: 'Inter', monospace;
-                            font-size: 0.9em;
-                            color: #00512A;
-                        }
-                        
-                        h1, h2, h3, .section-title, .guideline-title, .warning-title {
-                            page-break-after: avoid;
-                            break-after: avoid;
-                            orphans: 3;
-                            widows: 3;
-                        }
-                        
-                        p, li {
-                            orphans: 2;
-                            widows: 2;
-                        }
-                    </style>
-                </head>
-                <body>
-                    ${printContent.outerHTML}
-                </body>
-                </html>
-            `);
-            
-            printWindow.document.close();
-            
-            // Aguardar o carregamento das fontes e então imprimir
-            setTimeout(() => {
-                printWindow.print();
-                
-                // Fechar a janela após a impressão (opcional)
-                printWindow.addEventListener('afterprint', () => {
-                    printWindow.close();
-                });
-            }, 1000);
-        }
-        
-        // Adicionar atalho de teclado para gerar PDF (Ctrl+P customizado)
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                e.preventDefault();
-                generatePDF();
-            }
-        });
-    </script>
 </body>
 </html>
