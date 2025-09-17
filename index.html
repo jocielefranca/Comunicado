@@ -311,7 +311,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 1.5cm;
+                margin: 0.8cm;
             }
             
             body {
@@ -340,35 +340,57 @@
             
             .header {
                 page-break-inside: avoid;
-                padding: 25px 20px !important;
+                padding: 15px 10px !important;
                 break-inside: avoid;
+                margin-bottom: 10px !important;
             }
             
             .header h1 {
-                font-size: 1.8em !important;
+                font-size: 1.6em !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .header .subtitle {
+                font-size: 1em !important;
+            }
+            
+            .icon-container {
+                width: 60px !important;
+                height: 60px !important;
+                margin-bottom: 15px !important;
             }
             
             .content {
-                padding: 20px !important;
+                padding: 10px !important;
+            }
+            
+            .intro {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                margin-bottom: 15px !important;
+                padding: 15px !important;
+                box-shadow: none !important;
             }
             
             .section {
                 page-break-inside: avoid;
                 break-inside: avoid;
-                margin-bottom: 25px !important;
+                margin-bottom: 18px !important;
             }
             
             .section-title {
-                font-size: 1.2em !important;
+                font-size: 1.1em !important;
                 page-break-after: avoid;
                 break-after: avoid;
+                margin-bottom: 12px !important;
+                padding-bottom: 6px !important;
             }
             
             .guideline {
                 page-break-inside: avoid;
                 break-inside: avoid;
-                margin-bottom: 15px !important;
-                padding: 15px !important;
+                margin-bottom: 12px !important;
+                padding: 12px !important;
                 box-shadow: none !important;
                 border: 1px solid #ddd !important;
             }
@@ -376,27 +398,53 @@
             .guideline-title {
                 page-break-after: avoid;
                 break-after: avoid;
-                font-size: 1em !important;
+                font-size: 0.95em !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .guideline li {
+                margin-bottom: 8px !important;
+                line-height: 1.3 !important;
+                font-size: 0.9em !important;
             }
             
             .warning-box {
                 page-break-inside: avoid;
                 break-inside: avoid;
-                margin: 20px 0 !important;
-                padding: 20px !important;
+                margin: 15px 0 !important;
+                padding: 15px !important;
+            }
+            
+            .warning-title {
+                font-size: 1.1em !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .warning-box p {
+                font-size: 0.9em !important;
+                line-height: 1.3 !important;
             }
             
             .footer {
                 page-break-inside: avoid;
                 break-inside: avoid;
-                padding: 20px !important;
+                padding: 15px 10px !important;
+                margin-top: 15px !important;
             }
             
-            .intro {
-                page-break-inside: avoid;
-                break-inside: avoid;
-                margin-bottom: 20px !important;
-                padding: 20px !important;
+            .footer-message {
+                font-size: 0.9em !important;
+                margin-bottom: 10px !important;
+                line-height: 1.4 !important;
+            }
+            
+            .signature {
+                font-size: 0.9em !important;
+            }
+            
+            .contact-info {
+                margin-top: 10px !important;
+                font-size: 0.8em !important;
             }
             
             .special-highlight {
@@ -427,6 +475,17 @@
                 color: #357C0B !important;
             }
             
+            .steps-list {
+                background: transparent !important;
+                border: none !important;
+                padding: 8px !important;
+                margin-top: 5px !important;
+            }
+            
+            .steps-list li {
+                font-size: 0.85em !important;
+            }
+            
             h1, h2, h3, .section-title, .guideline-title, .warning-title {
                 page-break-after: avoid;
                 break-after: avoid;
@@ -451,7 +510,7 @@
             
             .contact-item {
                 display: block !important;
-                margin: 5px 0 !important;
+                margin: 3px 0 !important;
             }
         }
         
@@ -537,12 +596,12 @@
                 <h2 class="section-title">✅ Definição de Local para Condensadora</h2>
                 
                 <div class="guideline special-highlight">
-                    <div class="guideline-title">Localização Obrigatória da Condensadora</div>
+                    <div class="guideline-title">Localização da Condensadora - Opções Disponíveis</div>
                     <ul>
-                        <li>A solução técnica adotada para este empreendimento prevê que a <strong>condensadora seja instalada exclusivamente na varanda ou na área externa definida pelo condomínio</strong></li>
-                        <li>É fundamental que as empresas contratadas pelos condôminos <strong>respeitem esta orientação</strong></li>
-                        <li>Esta definição garante <strong>segurança, desempenho adequado e conformidade com o projeto</strong></li>
-                        <li>Orientamos que não sejam aceitas propostas de instalação em locais diferentes do especificado</li>
+                        <li>Para este empreendimento, foram previstas <strong>duas soluções técnicas</strong>: instalação na <strong>varanda ou na fachada</strong></li>
+                        <li>A <strong>opção padrão definida em projeto</strong> é a instalação na varanda, mas fica a <strong>critério do condomínio escolher</strong> a localização mais adequada às suas necessidades</li>
+                        <li>O condomínio deve definir um <strong>padrão de execução</strong> para manter a uniformidade estética do edifício</li>
+                        <li><strong>Importante:</strong> Independentemente do local escolhido (varanda ou fachada), <strong>as passagens das tubulações permanecem inalteradas</strong> conforme projeto original</li>
                     </ul>
                 </div>
             </div>
